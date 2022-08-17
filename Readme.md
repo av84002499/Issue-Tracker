@@ -12,8 +12,8 @@ Web application to track, update and create personal tasks and issues.
 
 ## Deployed app
 
-[View app](https://issue-tracker-portal.herokuapp.com/)
-> App is running on Free Tiers. There could be a one time delay in booting up the app.
+https://issue-tracker-portal.herokuapp.com/
+
 
 
 Application contains :
