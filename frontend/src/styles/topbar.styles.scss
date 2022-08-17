@@ -1,0 +1,67 @@
+@import 'variables.scss';
+
+.topbar {
+
+    background-color: $primary;
+    color: $light_text;
+
+    @include md() {
+        background-color: darken($color: $background, $amount: 3);
+        color: $dark_text;
+
+    }
+
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .app-name {
+        width: 100%;
+        text-align: left;
+        padding: 0rem 2rem;
+        font-size: 1.5rem;
+
+        &>.material-icons {
+            display: initial;
+            color: $dark_primary;
+            font-size: 1.5rem;
+
+            @include md() {
+                display: none;
+            }
+        }
+
+        &>span {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+
+    .profile-container {
+        display: none;
+
+        @include md() {
+            display: flex;
+            align-items: center;
+
+            .profile {
+                text-align: right;
+
+                .email {
+                    color: $medium_grey
+                }
+            }
+        }
+    }
+
+    .icon {
+        padding: 0rem 2rem;
+        cursor: pointer;
+
+        &>.material-icons {
+            font-size: 30px;
+        }
+    }
+}

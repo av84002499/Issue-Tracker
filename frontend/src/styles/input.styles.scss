@@ -1,0 +1,84 @@
+@import 'variables.scss';
+
+@mixin inputSizing {
+    box-sizing: border-box;
+}
+
+@mixin readOnly {
+    &:read-only {
+        background-color: $background;
+        padding: .5rem;
+    }
+}
+
+@mixin inputStyle {
+    outline: none;
+    border: none;
+    background-color: $light_grey;
+
+    width: 100%;
+    border-radius: $border_radius;
+    padding: 0rem 1.2rem;
+    font-size: 1.1rem;
+    font: unset;
+    @include inputSizing();
+}
+
+.form-field {
+    height: 3.5rem;
+    @include inputStyle();
+
+    &:focus {
+        border: 1px solid $secondary;
+    }
+
+    @include readOnly();
+}
+
+.form-field-label {
+    margin-left: 0.5rem;
+    color: $medium_grey
+}
+
+.mandatory {
+    color: $primary
+}
+
+textarea {
+
+    @include inputStyle();
+    resize: none;
+    overflow: auto;
+    padding: 1rem 1.1rem;
+    width: 100%;
+    @include inputSizing();
+
+    &:focus {
+        border: 1px solid $secondary;
+    }
+
+    @include readOnly();
+}
+
+.input-container {
+    margin: 1rem 0rem;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 3.5rem;
+    @include inputStyle();
+}
+
+.read-only-select {
+    background-color: $background;
+    padding: .5rem;
+}
+
+input[type="date"] {
+    &:read-only {
+        color: $dark_text;
+    }
+}

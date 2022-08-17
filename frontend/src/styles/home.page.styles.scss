@@ -1,0 +1,105 @@
+@import 'variables.scss';
+@import 'pageview.styles.scss';
+
+.home {
+    padding: 1rem;
+
+    .home-header {
+
+        @include xl() {
+            display: flex;
+        }
+
+        .left {
+            padding: .5rem;
+            width: 100%;
+
+            .title {
+                font-size: 1.3rem;
+            }
+
+            .subtitle {
+                color: $medium_grey;
+            }
+
+            .cta {
+                display: flex;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+
+                &>button {
+                    margin: .3rem;
+                }
+            }
+        }
+    }
+
+    .next-tasks {
+        padding: .5rem;
+        margin-top: 3rem;
+
+        @include md(){
+            margin-top: 1rem;
+        }
+
+        @include lg(){
+            margin-top: 0rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: bolder;
+            padding: .2rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-items {
+
+            @include md() {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                gap: 10px 10px;
+                grid-template-areas:
+                    ". . "
+                    ". . "
+            }
+            @include lg() {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                gap: 2px;
+                grid-template-areas:
+                    ". . ."
+                    "."
+            }
+
+            @include xl() {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: 1fr;
+                gap: 10px;
+                grid-template-areas:
+                    ". . . ."
+            }
+        }
+    }
+}
+
+.task-count-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px 10px;
+    grid-template-areas:
+        ". ."
+        ". .";
+
+    @include md() {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 10px;
+        grid-template-areas:
+            ". . . ."
+    }
+}
