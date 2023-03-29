@@ -1,0 +1,102 @@
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+.card {
+  width: 250px;
+  margin: 0.5em 0.5em;
+  flex-direction: column;
+  border-radius: 0.28571429rem;
+  border: 1px solid grey;
+}
+.content {
+  padding: 1em 1em;
+  border-bottom: 1px solid black;
+}
+
+.action-group {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  margin: 5px;
+}
+
+.issue-list-container {
+  overflow: scroll;
+}
+
+.header {
+  font-weight: 700;
+  margin: 5px 0px;
+}
+
+.status {
+  float: right;
+  color: #fff;
+}
+.status.close {
+  background: red;
+}
+.status.open {
+  background: green;
+}
+.status.reopen {
+  background: rgb(69, 69, 238);
+}
+
+.status.inprogress {
+  background: purple;
+}
+
+.edit-btn {
+  height: 30px;
+  width: 60px;
+  border: none;
+  background-color: #1d252d;
+  color: #fff;
+  border-radius: 20px;
+}
+
+.card-layout {
+  display: flex;
+  flex-direction: row;
+}
+.card-layout .issues {
+  width: calc(100% - 20px);
+  border: 1px solid black;
+  margin: 0 10px;
+}
+
+.card-layout h1 {
+  text-align: center;
+  background: #1f77b4;
+  color: #fff;
+  padding: 10px;
+  margin: 0px;
+}
+
+.issue-list-container {
+  margin: 0px 10px;
+}
+
+.card-layout .cards {
+  justify-content: center;
+}
+
+.card-layout .card {
+  width: 90%;
+  margin: 2%;
+}
+
+@media only screen and (max-width: 768px) {
+  .card-layout {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+  }
+  .card-layout .issues {
+    margin: 10px 10px;
+  }
+}
